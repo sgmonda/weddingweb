@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Moon Flower Bold';
+  src: url('./fonts/Moon Flower Bold.eot');
+  src: url('./fonts/Moon Flower Bold.woff2') format('woff2'),
+       url('./fonts/Moon Flower Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MoonFlowerBold';
+  src: url('./fonts/MoonFlowerBold.woff') format('woff'),
+       url('./fonts/MoonFlowerBold.ttf') format('truetype'),
+       url('./fonts/MoonFlowerBold.svg#MoonFlowerBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hastoler-Italic';
+  src: url('./fonts/Hastoler-Italic.eot');
+  src: url('./fonts/Hastoler-Italic.woff2') format('woff2'),
+       url('./fonts/Hastoler-Italic.woff') format('woff'),
+       url('./fonts/Hastoler-Italic.ttf') format('truetype'),
+       url('./fonts/Hastoler-Italic.svg#Hastoler-Italic') format('svg'),
+       url('./fonts/Hastoler-Italic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: white;
+  font-family: 'MoonFlowerBold', 'Moon Flower Bold', sans-serif;
+  font-size: 40px;
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Hastoler-Italic';
+  margin: 0.5em;
+}
+
+p {
+  margin: 0.5em;
+}
+
+hr {
+  border: none;
+  border-top: 0.1em dotted black;
+  color:#fff;
+  background-color:#fff;
+  height: 0.1em;
+  width:50%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+a {
+  color: black;
+}
+
+#logo {
+  display: block;
+  margin: auto;
+  margin: 10vh auto 2em auto;
+  width: 75vw;
+  max-width: 200px;
+}
+
+#disqus_thread {
+  margin-top: 2em;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form * {
+  margin: 2px;
+}
+
+form input, form textarea {
+  border: solid 3px black;
+  border-radius: 5px;
+  padding: 0.5em 1em 0.5em 1em;
+  font-size: 20px;
+}
+
+form button {
+  background: black;
+  color: white;
+  font-size: 1em;
+  padding: 0.1em;
+  font-family: 'MoonFlowerBold', 'Moon Flower Bold', sans-serif;
+}
+
+form > div {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+form > div > input:nth-child(1) {
+  flex-grow: 1;
+}
+form > div > input:nth-child(2) {
+  flex-grow: 1;
+}
+
+i {
+  font-size: 0.6em;
+  padding: 0 1em;
+}
+
+.block > a {
+  color: #aaa;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
