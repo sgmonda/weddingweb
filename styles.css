@@ -30,7 +30,7 @@
 
 #header {
   font-family: 'MoonFlowerBold', 'Moon Flower Bold', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 body {
@@ -105,7 +105,7 @@ form input, form textarea {
 form button {
   background: black;
   color: white;
-  font-size: 1em;
+  font-size: 1.8em;
   padding: 0.1em;
   font-family: 'MoonFlowerBold', 'Moon Flower Bold', sans-serif;
 }
@@ -133,5 +133,10 @@ i {
   cursor: pointer;
   text-decoration: underline;
 }
+
+#disqus_thread, form {
+  padding: 1em;
+}
+
 
 
