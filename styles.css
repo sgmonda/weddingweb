@@ -40,6 +40,7 @@ body {
   font-size: 16px;
   text-align: center;
   margin: auto;
+  padding: 2em;
 }
 
 h1, h2, h3, h4, h5 {
@@ -134,9 +135,6 @@ i {
   text-decoration: underline;
 }
 
-#disqus_thread, form {
-  padding: 1em;
-}
 
 
 
