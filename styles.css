@@ -28,18 +28,29 @@
   font-style: normal;
 }
 
+#header {
+  font-family: 'MoonFlowerBold', 'Moon Flower Bold', sans-serif;
+  font-size: 40px;
+}
+
 body {
   background: white;
-  font-family: 'MoonFlowerBold', 'Moon Flower Bold', sans-serif;
-  font-size: 30px;
+  font-family: 'Coming Soon', 'MoonFlowerBold', 'Moon Flower Bold', sans-serif;
   max-width: 800px;
+  font-size: 25px;
   text-align: center;
   margin: auto;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Hastoler-Italic';
+  font-family: 'MoonFlowerBold', 'Hastoler-Italic';
   margin: 0.5em;
+  font-size: 1.8em;
+}
+
+h5 {
+  font-family: 'MoonFlowerBold', 'Hastoler-Italic';
+  font-size: 1.5em;
 }
 
 p {
