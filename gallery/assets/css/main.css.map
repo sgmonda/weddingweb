@@ -1,0 +1,18 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"main.sass",
+		"_sass/gallery.sass",
+		"_sass/theme.sass",
+		"_sass/post.sass"
+	],
+	"sourcesContent": [
+		"@import 'gallery';\n@import 'post';\n",
+		"@import 'theme';\n\nul.gallery {\n  list-style: none;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  margin: 0;\n  padding: 0;\n  max-width: $max-width;\n  margin: auto;\n\n  & > li {\n    display: block;\n    height: $thumbnail-height + $gap / 2;\n    width: $thumbnail-width + $gap / 2;\n    padding: $gap / 2;\n\n    @media(max-width: 565px) {\n      width: $thumbnail-width / 2 + $gap / 2;\n      height: $thumbnail-height / 2 + $gap / 2; }\n\n    & img {\n      height: $thumbnail-height + $gap / 2;\n      width: $thumbnail-width + $gap / 2;\n      @media(max-width: 565px) {\n        width: $thumbnail-width / 2 + $gap / 2;\n        height: $thumbnail-height / 2 + $gap / 2; } } } }\n\n\n\n\n",
+		"@import url('https://fonts.googleapis.com/css?family=Caveat|Lobster&display=swap');\n\n$gap: 8px;\n$thumbnail-width: 171px;\n$thumbnail-height: 114px;\n$max-width: ($thumbnail-width + $gap * 2) * 7;\n\nbody {\n  text-align: center;\n  padding-top: 10em;\n\n  h1.title {\n    font-family: 'Lobster';\n    margin-bottom: 0.25em; }\n  h2.date {\n    font-family: 'Caveat';\n    margin-top: 0; } }\n",
+		"@import 'theme';\n\n"
+	],
+	"names": [],
+	"mappings": "AEAA,OAAO,CAAC,0EAAI,CAAZ,OAAO,CAAC,0EAAI,CAOZ,AAAA,IAAI,AAAC,CACH,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,IAAI,CAOG,AATtB,AAIE,IAJE,CAIF,EAAE,AAAA,MAAM,AAAC,CACP,WAAW,CAAE,SAAS,CACtB,aAAa,CAAE,MAAM,CAAG,AAN5B,AAOE,IAPE,CAOF,EAAE,AAAA,KAAK,AAAC,CACN,WAAW,CAAE,QAAQ,CACrB,UAAU,CAAE,CAAC,CAAG,ADdpB,AAAA,EAAE,AAAA,QAAQ,AAAC,CACT,UAAU,CAAE,IAAI,CAChB,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CACvB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,SAAS,CCJC,MAAiC,CDK3C,MAAM,CAAE,IAAI,CAiB2C,AAzBzD,AAUE,EAVA,AAAA,QAAQ,CAUJ,EAAE,AAAC,CACL,OAAO,CAAE,KAAK,CACd,MAAM,CAAE,KAA4B,CACpC,KAAK,CAAE,KAA2B,CAClC,OAAO,CAAE,GAAQ,CAWkC,AATnD,MAAM,EAAC,SAAS,EAAE,KAAK,EAhB3B,AAUE,EAVA,AAAA,QAAQ,CAUJ,EAAE,AAAC,CAOH,KAAK,CAAE,MAA+B,CACtC,MAAM,CAAE,IAAgC,CAOS,CAzBvD,AAoBI,EApBF,AAAA,QAAQ,CAUJ,EAAE,CAUF,GAAG,AAAC,CACJ,MAAM,CAAE,KAA4B,CACpC,KAAK,CAAE,KAA2B,CAGa,AAF/C,MAAM,EAAC,SAAS,EAAE,KAAK,EAvB7B,AAoBI,EApBF,AAAA,QAAQ,CAUJ,EAAE,CAUF,GAAG,AAAC,CAIF,KAAK,CAAE,MAA+B,CACtC,MAAM,CAAE,IAAgC,CAAK,CCpBrD,AAAA,IAAI,AAAC,CACH,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,IAAI,CAOG,AATtB,AAIE,IAJE,CAIF,EAAE,AAAA,MAAM,AAAC,CACP,WAAW,CAAE,SAAS,CACtB,aAAa,CAAE,MAAM,CAAG,AAN5B,AAOE,IAPE,CAOF,EAAE,AAAA,KAAK,AAAC,CACN,WAAW,CAAE,QAAQ,CACrB,UAAU,CAAE,CAAC,CAAG"
+}

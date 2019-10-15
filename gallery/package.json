@@ -1,0 +1,16 @@
+{
+  "name": "gallery-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "dev": "bundle exec jekyll serve",
+    "postinstall": "bundle"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "stdio": "^0.2.7"
+  }
+}
