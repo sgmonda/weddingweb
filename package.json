@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "bundle exec jekyll build",
-    "dev": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build --trace",
+    "dev": "bundle exec jekyll serve --trace",
     "postinstall": "bundle"
   },
   "author": "",

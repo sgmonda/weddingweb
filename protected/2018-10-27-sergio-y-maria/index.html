@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sergio y María</title>
+  <link rel="stylesheet" href="/assets/css/main.css"/>
+</head>
+
+<body>
+  <!-- <nav>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+  </nav> -->
+  <h1 class="title">Sergio y María</h1>
+  <h2 class="date"></h2>
+  <section>
+    <div id="content">
+  Introduce contraseña
+  <input id="password" type="password">
+  <button onclick="decrypt()">Enviar</button>
+  <p id="errmsg" style="color: red;"></p>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" integrity="sha256-u6BamZiW5tCemje2nrteKC2KoLIKX9lKPSpvCkOhamw=" crossorigin="anonymous"></script>
+<script>
+  function decrypt() {
+    var protectedContent = "PHIeJ837yOCGdIyOKHN2pQ==|hW4+kTc5lknmK2acLb1EkcOkeKPQEuCfQ+JuufEOizw=|nXULoZUUwTEMosj9dBZK1x7ZqnviFgabRmXezbbmIGh6a9BpiLGbN2SgE19RMr/HttyeXvHI3512TtmAFW2OMymmI6AGAsTsGmGUVfrX03APPDZ6EKs9nXNczxVimDFR";
+    var password = document.getElementById('password').value;
+
+    var payload = protectedContent.split("|");
+    var iv = payload[0];
+    var hmac = payload[1];
+    var cipherText = payload[2];
+
+    var passphraseDgst = CryptoJS.SHA256(password).toString();
+    var decryptedhmac = CryptoJS.HmacSHA256(cipherText, CryptoJS.enc.Hex.parse(passphraseDgst)).toString().trim();
+    if(CryptoJS.enc.Base64.parse(hmac).toString() === decryptedhmac){
+      var decrypted = CryptoJS.AES.decrypt(
+        {ciphertext:CryptoJS.enc.Base64.parse(cipherText)},
+        CryptoJS.enc.Hex.parse(passphraseDgst),
+        {iv:CryptoJS.enc.Base64.parse(iv)}
+      );
+      var content = CryptoJS.enc.Utf8.stringify(decrypted);
+      document.getElementById('content').innerHTML = content;
+    } else {
+      document.getElementById('errmsg').innerHTML = "Contraseña incorrecta";
+    }
+  }
+
+  var passwordInput = document.getElementById('password');
+  passwordInput.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      decrypt();
+    }
+  })
+</script>
+
+  </section>
+  <!-- <footer>
+    &copy; to me
+  </footer> -->
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
